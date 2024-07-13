@@ -1,0 +1,151 @@
+body {
+    background: url('/img/contact.jpg') no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    background-size: cover;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;
+    opacity: 0.5;
+    animation: zoomFade 3s forwards;
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.main-content.hidden {
+    opacity: 0;
+}
+
+.main-content.visible {
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(25px);
+    z-index: -1;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    box-shadow: 0px 6px 5.82px 3.18px rgba(0,0,0,0.24), 1px 5px 3.92px 3.08px rgba(0,0,0,0.16);
+}
+
+.blue-info{
+    text-align: center;
+    color: #fff;
+    background-color: rgb(68, 127, 182);
+    box-shadow: 0px 2px 2.82px 0.18px rgba(0,0,0,0.24), 0px 1px 3.92px 0.08px rgba(0,0,0,0.16);
+    padding: 10px 20px;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contact-links {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.contact-link img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.contact-link span{
+    font-size: 16px;
+}
+
+.link-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+}
+
+.link {
+    font-size: 18px;
+    color: #000;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 10px;
+    }
+
+    .contact-link span {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+}
